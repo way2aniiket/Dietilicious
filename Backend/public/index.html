@@ -17,16 +17,17 @@
         <div  class="navbar">
             <a href="#home">HOME</a>
             <a href="#services-conatiner">SERVICES</a>
-            <a href="#client-section">ABOUT US</a>
+            <a href="#about-us">ABOUT US</a>
             <a href="#contact">CONTACT US</a>
-            <button class="login-button" type="button" style="float: right;">Login</button>
+            <button class="login-button" onclick="window.open('/login')" type="button" style="float: right;">Login</button>
         </div>
 
     <div id="conatiner">
-      <div class="home">
+      <div class="home" id="about-us">
         <span class="about">
           <h1 class="primary" style="color: rgb(0, 0, 0);">WELCOME TO DIETILICIOUS</h1><br><br><br>
-          <p>Our dream at HealthyDiet is to build an online hub empowering individuals to make informed choices for better health, offering resources like recipes, meal plans, expert advice, and supportive forums. Join us in turning this dream into reality, one healthy choice at a time.</p>
+          <p>Our dream at <b>DIETILICIOUS</b> is to build an online hub empowering individuals to make informed choices for better health, offering resources like recipes, meal plans, expert advice, and supportive forums. Join us in turning this dream into reality, one healthy choice at a time.</p><br><br><br>
+          <q><b>Eat smart, live well: DIETILICIOUS, your gateway to a vibrant lifestyle.</b></q>
         </span>
         <span class="img-slider">
         <!--image slider start-->
@@ -40,16 +41,16 @@
           <!--radio buttons end-->
           <!--slide images start-->
           <div class="slide first">
-            <img src="../public/images/community.jpg" alt="">
+            <img src="../public/images/community.jpg" alt="Community">
           </div>
           <div class="slide">
-            <img src="../public/images/diet-plan.jpg" alt="">
+            <img src="../public/images/cooking.jpg" alt="Cooking">
           </div>
           <div class="slide">
-            <img src="../public/images/Educational-resources.jpg" alt="">
+            <img src="../public/images/Educational-resources.jpg" alt="Educational Resources">
           </div>
           <div class="slide">
-            <img src="../public/images/food.jpg" alt="">
+            <img src="../public/images/food.jpg" alt="Healthy Food">
           </div>
           <!--slide images end-->
           <!--automatic navigation start-->
@@ -74,8 +75,8 @@
   
         </span>
       </div>
+      <div class="services-conatiner" id="services-conatiner">
         <h1 class="our-services">OUR SERVICES</h1>
-        <div class="services-conatiner">
             <div id="services">
                 <div class="box-front">
                     <img src="images/ll.jpg" alt="">
@@ -137,7 +138,7 @@
     </div>
 
     <div class="gtco-testimonials">
-        <h1 class="our-services">Testimonials</h1>
+        <h1 class="our-services">TESTIMONIALS</h1>
         <div class="owl-carousel owl-carousel1 owl-theme">
           <div>
             <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300" alt="">
@@ -236,22 +237,23 @@
     <section id="contact">
         <h1 class="contact-heading" >CONTACT US</h1>
         <div id="contact-box">
-            <form action="POST">    
+            <form method="post" action="/contact" >    
                     <label for="name">Name *</label><br>
-                    <input type="text" autocomplete="given-name" id="name" placeholder="What can we call you?">  <br><br>   
+                    <input type="text" autocomplete="given-name" id="name"
+                    name="name" placeholder="What can we call you?">  <br><br>   
                     <label for="email">Email *</label><br>
-                    <input type="email" autocomplete="email" id="email" placeholder="What's the best email to reach you at ?">    <br><br>
+                    <input name="email" type="email" autocomplete="email" id="email" placeholder="What's the best email to reach you at ?">    <br><br>
                     <label for="number">Phone Number *</label><br>
                     <input type="text" name="number" id="number" placeholder="What's the best mobile number to reach you at"> <br><br>
                     <label for="dropdown">What do you want to talk about?</label><br>
-                    <select name="client-items" id="client-items">
+                    <select name="query" >
                         <option value="select">--SELECT--</option>
-                        <option value="enquiry">General Inquiry</option>
-                        <option value="Planning">Meal Planning Assistance</option>
-                        <option value="Advice">Nutrition Advice</option>
-                        <option value="Recipe">Recipe Suggestions</option>
-                        <option value="Support">Technical Support</option>
-                        <option value="Community">Community Engagement</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Meal Planning Assistance">Meal Planning Assistance</option>
+                        <option value="Nutrition Advice">Nutrition Advice</option>
+                        <option value="Recipe Suggestions">Recipe Suggestions</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Community Engagement">Community Engagement</option>
                     </select><br><br>
                     <label for="message">Message</label><br>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Ok, What's up?"></textarea>
